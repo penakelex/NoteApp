@@ -14,8 +14,10 @@ data class Note(
     val color: Color
 ) {
     companion object {
-        val noteColors = listOf<Color>(
-            //TODO: Сделать цвета
+        val noteColors = listOf(
+            Color.Cyan,
+            Color.Green,
+            Color.Magenta,
         )
     }
 }

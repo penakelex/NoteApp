@@ -6,7 +6,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import org.penakelex.noteapp.feature_note.data.data_source.NoteDao
 import org.penakelex.noteapp.feature_note.data.data_source.NoteDatabase
 import org.penakelex.noteapp.feature_note.data.repository.NoteRepositoryImplementation
 import org.penakelex.noteapp.feature_note.domain.repository.NoteRepository
