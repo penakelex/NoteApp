@@ -12,6 +12,7 @@ import org.penakelex.noteapp.feature_note.data.repository.NoteRepositoryImplemen
 import org.penakelex.noteapp.feature_note.domain.repository.NoteRepository
 import org.penakelex.noteapp.feature_note.domain.use_case.AddNoteUseCase
 import org.penakelex.noteapp.feature_note.domain.use_case.DeleteNoteUseCase
+import org.penakelex.noteapp.feature_note.domain.use_case.GetNoteUseCase
 import org.penakelex.noteapp.feature_note.domain.use_case.GetNotesUseCase
 import org.penakelex.noteapp.feature_note.domain.use_case.NoteUseCases
 import javax.inject.Singleton
@@ -44,6 +45,7 @@ object AppModule {
     ): NoteUseCases = NoteUseCases(
         getNotes = GetNotesUseCase(repository),
         deleteNote = DeleteNoteUseCase(repository),
-        addNote = AddNoteUseCase(repository)
+        addNote = AddNoteUseCase(repository),
+        getNote = GetNoteUseCase(repository)
     )
 }
