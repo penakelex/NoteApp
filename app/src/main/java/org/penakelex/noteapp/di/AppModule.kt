@@ -10,6 +10,7 @@ import org.penakelex.noteapp.feature_note.data.data_source.NoteDao
 import org.penakelex.noteapp.feature_note.data.data_source.NoteDatabase
 import org.penakelex.noteapp.feature_note.data.repository.NoteRepositoryImplementation
 import org.penakelex.noteapp.feature_note.domain.repository.NoteRepository
+import org.penakelex.noteapp.feature_note.domain.use_case.AddNoteUseCase
 import org.penakelex.noteapp.feature_note.domain.use_case.DeleteNoteUseCase
 import org.penakelex.noteapp.feature_note.domain.use_case.GetNotesUseCase
 import org.penakelex.noteapp.feature_note.domain.use_case.NoteUseCases
@@ -42,6 +43,7 @@ object AppModule {
         repository: NoteRepository
     ): NoteUseCases = NoteUseCases(
         getNotes = GetNotesUseCase(repository),
-        deleteNote = DeleteNoteUseCase(repository)
+        deleteNote = DeleteNoteUseCase(repository),
+        addNote = AddNoteUseCase(repository)
     )
 }
